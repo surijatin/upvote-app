@@ -1,25 +1,14 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import UpvoteDemo from "@/components/UpvoteDemo";
+import { UpvoteProvider } from "@/context/UpvoteContext";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <UpvoteProvider>
+      <main className="min-h-screen p-8 max-w-4xl mx-auto">
+        <h1 className="text-2xl font-bold mb-6">Upvote Component System</h1>
+        <UpvoteDemo />
+      </main>
+    </UpvoteProvider>
   );
 }
 
